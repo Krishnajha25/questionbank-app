@@ -18,16 +18,16 @@ const QuestionSchema = new mongoose.Schema({
         required: true
     },
     stream:{
-        type: String,
-        required: true
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Stream'
     },
     semester:{
-        type: String,
-        required: true
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Semester'
     },
     subject:{
-        type: String,
-        required: true
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Subject'
     }
 })
 
